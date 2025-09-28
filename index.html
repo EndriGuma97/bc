@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BC - Zoho Expert & Business Automation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      /* --- STABLE & PROFESSIONAL CSS (LIGHT THEME) --- */
+      :root {
+        --primary-color: #0066ff;
+        --secondary-color: #051d38;
+        --background-color: #ffffff;
+        --light-gray-bg: #f8f9fa;
+        --text-color: #555;
+        --heading-color: #111;
+        --white-color: #ffffff;
+        --border-color: #eaeaea;
+        --header-height: 100px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      section {
+        padding: 100px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--heading-color);
+        font-weight: 600;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background: var(--primary-color);
+        color: var(--white-color);
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+      }
+
+      .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        transition: box-shadow 0.3s ease;
+        background-color: var(--white-color);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .logo img {
+        height: 65px;
+        width: auto;
+      }
+      .nav-menu {
+        list-style: none;
+        display: flex;
+      }
+      .nav-item {
+        margin-left: 40px;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-weight: 500;
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-color);
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+      .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--secondary-color);
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+
+      #hero {
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        color: var(--white-color);
+      }
+      #hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("hero.jpg");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+      .hero-content {
+        max-width: 800px;
+      }
+      .hero-content h1 {
+        font-size: 3.8rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: var(--white-color);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-title h2 {
+        font-size: 2.5rem;
+      }
+      .section-title p {
+        max-width: 600px;
+        margin: 10px auto 0 auto;
+      }
+
+      .zoho-badge {
+        display: inline-block;
+        background-color: #f0f6ff;
+        color: var(--primary-color);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 500;
+        border: 1px solid #cce0ff;
+        margin-top: 15px;
+      }
+
+      #services {
+        background-color: var(--light-gray-bg);
+      }
+      .service-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+      .service-item:last-child {
+        margin-bottom: 0;
+      }
+      .service-item:nth-child(even) .service-image {
+        order: 2;
+      }
+      .service-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .service-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      #about {
+        background-color: var(--white-color);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 80px;
+        align-items: flex-start;
+      }
+      .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .about-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .about-content h3 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .about-content ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .about-content ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+      }
+      .about-content ul li::before {
+        content: "✓";
+        color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      #partners {
+        background-color: var(--light-gray-bg);
+      }
+      .partners-container {
+        text-align: center;
+      }
+      .partners-container h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #888;
+        margin-bottom: 30px;
+      }
+      .partner-logos {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        align-items: center;
+      }
+      .partner-logo a {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .partner-logo a:hover {
+        color: var(--primary-color);
+      }
+
+      #contact {
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+      }
+      #contact h2,
+      #contact h3 {
+        color: var(--white-color);
+      }
+      #contact p {
+        color: #ccc;
+      }
+      .contact-methods {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .contact-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        padding: 40px;
+        border-radius: 15px;
+        flex: 1;
+        min-width: 250px;
+      }
+      .contact-card .icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+      .contact-card a {
+        color: var(--white-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .footer {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .floating-action-button {
+        display: none; /* Hidden on desktop */
+      }
+      .menu-overlay {
+        display: none;
+      }
+
+      /* --- MOBILE ENHANCEMENTS START HERE --- */
+      @media screen and (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.8rem;
+        }
+
+        /* Modern Card Design for Services */
+        .service-item {
+          grid-template-columns: 1fr;
+          gap: 0;
+          background-color: var(--white-color);
+          border-radius: 16px;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+          overflow: hidden; /* To keep image corners rounded */
+        }
+        .service-item:nth-child(even) .service-image {
+          order: 0;
+        }
+        .service-image {
+          margin-bottom: 0;
+        }
+        .service-image img {
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .service-content {
+          padding: 30px;
+          text-align: left;
+        }
+
+        /* Modern Card Design for About section */
+        .about-grid {
+          grid-template-columns: 1fr;
+          background-color: var(--white-color);
+          border-radius: 16px;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+        }
+        .about-image {
+          margin: 0;
+          max-width: 100%;
+        }
+        .about-image img {
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .about-content {
+          padding: 30px;
+        }
+
+        /* App-Style Navigation Menu */
+        .menu-overlay {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          z-index: 1001;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.4s ease;
+        }
+        .menu-overlay.active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .nav-menu {
+          position: fixed;
+          left: -80%; /* Start off-screen */
+          top: 0;
+          flex-direction: column;
+          justify-content: center;
+          background-color: var(--white-color);
+          width: 80%;
+          height: 100%;
+          z-index: 1002;
+          transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
+        }
+        .nav-menu.active {
+          left: 0;
+        }
+        .nav-item {
+          margin: 20px 0;
+        }
+        .nav-link {
+          font-size: 1.2rem;
+        }
+
+        .burger {
+          display: block;
+          z-index: 1003; /* Ensure it's above overlay */
+        }
+        .burger.toggle .line1 {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .burger.toggle .line2 {
+          opacity: 0;
+        }
+        .burger.toggle .line3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Floating Action Button (FAB) */
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.7);
+          }
+          70% {
+            box-shadow: 0 0 0 15px rgba(0, 102, 255, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(0, 102, 255, 0);
+          }
+        }
+        .floating-action-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          bottom: 25px;
+          right: 25px;
+          width: 60px;
+          height: 60px;
+          background-color: #25d366; /* WhatsApp Green */
+          color: white;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          z-index: 999;
+          font-size: 1.8rem;
+          text-decoration: none;
+          animation: pulse 2s infinite;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <a href="#hero" class="logo">
+          <img src="logo.png" alt="BC Logo" />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#hero" class="nav-link">Ballina</a></li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">Shërbimet</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">Rreth Nesh</a>
+          </li>
+          <li class="nav-item">
+            <a href="#partners" class="nav-link">Partnerët</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Kontakti</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+    <div class="menu-overlay"></div>
+
+    <main>
+      <section id="hero">
+        <div class="hero-content" style="padding-top: 50px">
+          <h1>Optimizoni Biznesin. Maksimizoni Rezultatet.</h1>
+          <p>
+            Ne implementojmë zgjidhje të personalizuara teknologjike dhe Zoho
+            për të rritur produktivitetin dhe efiçencën e kompanisë tuaj.
+          </p>
+          <a href="#contact" class="btn">Na Kontaktoni</a>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Shërbimet Tona Kryesore</h2>
+            <p>
+              Nga automatizimi i proceseve te menaxhimi i rrjeteve sociale, ne
+              ofrojmë zgjidhje të plota për rritjen tuaj dixhitale.
+            </p>
+            <div class="zoho-badge">
+              <i class="fas fa-check-circle"></i> Official Zoho Partner
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-content">
+              <h3>Implementim & Optimizim Zoho</h3>
+              <p>
+                Analizojmë dhe përshtasim të gjithë suitën e Zoho për të krijuar
+                zgjidhje unike që automatizojnë dhe thjeshtojnë operacionet e
+                biznesit tuaj nga A në Zh.
+              </p>
+            </div>
+            <div class="service-image">
+              <img src="image-1.png" alt="Zoho Implementation" />
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-image">
+              <img src="image-2.png" alt="Business Automation" />
+            </div>
+            <div class="service-content">
+              <h3>Automatizim i Proceseve të Biznesit</h3>
+              <p>
+                Identifikojmë dhe eliminojmë detyrat manuale dhe përsëritëse,
+                duke lejuar ekipin tuaj të fokusohet në iniciativa strategjike
+                që sjellin vlerë reale.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-content">
+              <h3>Marketing Dixhital & Menaxhim Social</h3>
+              <p>
+                Krijojmë një prezencë të fuqishme online për markën tuaj, duke
+                menaxhuar fushatat dhe rrjetet sociale për të tërhequr dhe
+                angazhuar klientët tuaj idealë.
+              </p>
+            </div>
+            <div class="service-image">
+              <img src="image-3.png" alt="Digital Marketing" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-image">
+              <img
+                src="about-endri.jpg"
+                alt="Endri - Technology Systems Director & Zoho Expert"
+              />
+            </div>
+            <div class="about-content">
+              <h2>Endri - Technology Systems Director</h2>
+              <p>
+                I pasionuar për të ndihmuar bizneset të arrijnë performancën
+                maksimale përmes implementimit dhe optimizimit strategjik të
+                teknologjisë...
+              </p>
+              <h3>
+                Ekspertizë e Provuar në Automatizimin e Biznesit & Implementimin
+                e Zoho
+              </h3>
+              <p>
+                Unë kam një histori të provuar suksesi, duke ndihmuar
+                drejtpërdrejt kompani të shumta në përmirësimin e ndjeshëm të
+                automatizimit të biznesit dhe infrastrukturës së tyre
+                teknologjike...
+              </p>
+              <ul>
+                <li>
+                  <strong>Optimizimin e Proceseve të Biznesit:</strong>
+                  Analizimin e flukseve ekzistuese të punës...
+                </li>
+                <li>
+                  <strong
+                    >Implementimin & Përshtatjen e Zgjidhjeve Zoho:</strong
+                  >
+                  Përshtatjen e aplikacioneve Zoho...
+                </li>
+                <li>
+                  <strong
+                    >Përmirësimin e Rrjedhës së të Dhënave & Integrimin:</strong
+                  >
+                  Sigurimin e shkëmbimit të pandërprerë të të dhënave...
+                </li>
+                <li>
+                  <strong>Rritjen e Efiçencës & Produktivitetit:</strong>
+                  Përdorimin e aftësive të automatizimit të Zoho...
+                </li>
+              </ul>
+              <h3>Përtej Zoho: Një Perspektivë Holistike e Teknologjisë</h3>
+              <p>
+                Ekspertiza ime teknike shtrihet përtej ekosistemit Zoho.
+                Dashuria ime për "sistemet e nivelit të ulët" më jep një kuptim
+                themelor të funksionimit të ndërlikuar të teknologjisë...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners">
+        <div class="container partners-container">
+          <h3>Në Partneritet Strategjik Me</h3>
+          <div class="partner-logos">
+            <div class="partner-logo">
+              <a href="https://needgreaters.com" target="_blank">NG</a>
+            </div>
+            <div class="partner-logo">
+              <a href="https://needgreatersglobal.com" target="_blank">NGG-K</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Gati për të Filluar?</h2>
+            <p>
+              Kontaktoni me ne sot për një konsultë falas dhe zbuloni se si mund
+              ta transformojmë biznesin tuaj.
+            </p>
+          </div>
+          <div class="contact-methods">
+            <div class="contact-card">
+              <div class="icon"><i class="fab fa-whatsapp"></i></div>
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/355698858963" target="_blank"
+                >+355 69 885 8963</a
+              >
+            </div>
+            <div class="contact-card">
+              <div class="icon"><i class="fas fa-phone-alt"></i></div>
+              <h3>Telefon</h3>
+              <a href="tel:+355698858963">+355 69 885 8963</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      href="https://wa.me/355698858963"
+      target="_blank"
+      class="floating-action-button"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer">
+      <p>&copy; 2025 BC Digital. Të gjitha të drejtat e rezervuara.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // STABLE ANIMATION LOGIC
+        const revealItems = gsap.utils.toArray("section, .service-item");
+        gsap.set(revealItems, { autoAlpha: 0, y: 50 });
+
+        revealItems.forEach((item) => {
+          gsap.to(item, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          });
+        });
+
+        gsap.from(".hero-content > *", {
+          autoAlpha: 0,
+          y: 30,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,
+          delay: 0.2,
+        });
+
+        // MOBILE NAVIGATION & ENHANCEMENTS LOGIC
+        const burger = document.querySelector(".burger");
+        const navMenu = document.querySelector(".nav-menu");
+        const menuOverlay = document.querySelector(".menu-overlay");
+
+        const toggleMenu = () => {
+          const isActive = navMenu.classList.contains("active");
+          burger.classList.toggle("toggle", !isActive);
+          navMenu.classList.toggle("active", !isActive);
+          menuOverlay.classList.toggle("active", !isActive);
+
+          if (!isActive) {
+            // If menu is opening
+            gsap.fromTo(
+              ".nav-item",
+              { opacity: 0, x: -30 },
+              {
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                delay: 0.2,
+                ease: "power3.out",
+              }
+            );
+          }
+        };
+
+        burger.addEventListener("click", toggleMenu);
+        menuOverlay.addEventListener("click", toggleMenu);
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (navMenu.classList.contains("active")) {
+              toggleMenu();
+            }
+          });
+        });
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll("section[id]");
+        sections.forEach((section) => {
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            onToggle: (self) => {
+              if (self.isActive) {
+                const id = section.getAttribute("id");
+                document.querySelectorAll(".nav-link").forEach((link) => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("href") === `#${id}`) {
+                    link.classList.add("active");
+                  }
+                });
+              }
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
