@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BC Marketing - Ofertë Shërbimesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Using Inter font */
+      body {
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Custom gradient text */
+      .gradient-text {
+        background: linear-gradient(90deg, #4f46e5, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      /* Styling for PDF conversion */
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .no-print {
+          display: none;
+        }
+        .page-break {
+          page-break-after: always;
+        }
+        /* Ensure backgrounds are printed */
+        .bg-slate-900,
+        .bg-slate-800 {
+          background-color: #0f172a !important; /* Use specific color for print */
+        }
+        .shadow-lg,
+        .shadow-2xl {
+          box-shadow: none !important;
+        }
+      }
+      .decorative-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://www.bitcryptics.online/image-2.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.05;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-900 text-gray-200">
+    <div class="relative min-h-screen w-full mx-auto p-4 sm:p-8 md:p-12">
+      <div class="decorative-bg"></div>
+      <div class="relative z-10 max-w-5xl mx-auto">
+        <!-- Header Section -->
+        <header
+          class="flex flex-col sm:flex-row justify-between items-center mb-12 md:mb-20 border-b border-slate-700 pb-6"
+        >
+          <div class="mb-4 sm:mb-0">
+            <img
+              src="https://www.bitcryptics.online/logo.png"
+              alt="BitCryptics Logo"
+              class="h-16 w-auto bg-white rounded-lg p-2"
+            />
+          </div>
+          <div class="text-center sm:text-right">
+            <h1 class="text-3xl md:text-4xl font-black text-white">
+              Ofertat e Vjeshtës
+            </h1>
+            <p class="text-slate-400 mt-1">
+              Zgjidhje Dixhitale për Biznesin Tuaj
+            </p>
+          </div>
+        </header>
+
+        <!-- Main Content: Packages -->
+        <main>
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+            Pako Profesionale Marketingu
+          </h2>
+          <p class="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12">
+            Çdo paketë është dizajnuar për të rritur prezencën tuaj online, për
+            të tërhequr klientë të rinj dhe për të automatizuar proceset e
+            biznesit.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <!-- Package 1 -->
+            <div
+              class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 transform hover:scale-105 transition-transform duration-300 shadow-2xl shadow-indigo-500/10"
+            >
+              <h3 class="text-2xl font-bold text-white mb-2">Pako Avancuar</h3>
+              <p class="gradient-text font-semibold text-lg mb-6">
+                Rritje & Optimizim
+              </p>
+
+              <div class="text-4xl font-black text-white mb-6">
+                200€
+                <span class="text-lg font-medium text-slate-400">/ muaj</span>
+              </div>
+
+              <ul class="space-y-4 text-slate-300">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 mr-3 text-indigo-400 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  <span>Ndërtim & Mirëmbajtje Faqe Interneti (Website)</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 mr-3 text-indigo-400 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    ></path>
+                  </svg>
+                  <span>Optimizim SEO për renditje të lartë në Google</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 mr-3 text-indigo-400 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01V5M12 20v-1m0-1v-1m0-1v-1m0-1v-1m0-1v-1m0-1v-1m0 0v-1m-4-2h8a2 2 0 012 2v4a2 2 0 01-2 2h-8a2 2 0 01-2-2v-4a2 2 0 012-2z"
+                    ></path>
+                  </svg>
+                  <span
+                    >60€ Boost (Instagram & Facebook) me optimizim
+                    audience</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 mr-3 text-indigo-400 flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  <span>Editim Profesional i Videove dhe Postimeve</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Package 2 -->
+            <div
+              class="bg-gradient-to-br from-indigo-600 to-pink-600 rounded-2xl p-8 relative overflow-hidden shadow-2xl shadow-pink-500/20"
+            >
+              <div
+                class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
+              ></div>
+              <div
+                class="absolute top-20 -right-20 w-40 h-40 bg-white/10 rounded-full"
+              ></div>
+              <h3 class="text-2xl font-bold text-white mb-2 relative z-10">
+                Pako Premium AI
+              </h3>
+              <p
+                class="text-indigo-200 font-semibold text-lg mb-6 relative z-10"
+              >
+                Automatizim & Fuqi Maksimale
+              </p>
+
+              <div class="text-4xl font-black text-white mb-6 relative z-10">
+                380€
+                <span class="text-lg font-medium text-indigo-200">/ muaj</span>
+              </div>
+
+              <ul class="space-y-4 text-white relative z-10">
+                <li class="flex items-start font-medium">
+                  <svg
+                    class="w-5 h-5 mr-3 text-white flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                  <span>Custom AI Chatbot (Asistent Virtual Inteligjent)</span>
+                </li>
+                <li class="flex items-start font-medium">
+                  <svg
+                    class="w-5 h-5 mr-3 text-white flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m-9 9h18"
+                    ></path>
+                  </svg>
+                  <span>Website, Mirëmbajtje Mujore & Optimizim SEO</span>
+                </li>
+                <li class="flex items-start font-medium">
+                  <svg
+                    class="w-5 h-5 mr-3 text-white flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                    ></path>
+                  </svg>
+                  <span>Ndërtim Automatizimesh për Biznesin</span>
+                </li>
+                <li class="flex items-start font-medium">
+                  <svg
+                    class="w-5 h-5 mr-3 text-white flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21.255 12c0 4.22-.032 5.343-1.072 6.383s-2.163 1.04-6.383 1.04-5.343-.032-6.383-1.072-1.04-2.163-1.04-6.383.032-5.343 1.072-6.383 2.163-1.04 6.383-1.04 5.343.032 6.383 1.072 1.04 2.163 1.04 6.383z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 16a4 4 0 100-8 4 4 0 000 8z"
+                    ></path>
+                  </svg>
+                  <span>Platforma Zoho One (mjete për menaxhim biznesi)</span>
+                </li>
+                <li class="flex items-start font-medium">
+                  <svg
+                    class="w-5 h-5 mr-3 text-white flex-shrink-0 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2.01V5M12 20v-1m0-1v-1m0-1v-1m0-1v-1m0-1v-1m0-1v-1m0 0v-1m-4-2h8a2 2 0 012 2v4a2 2 0 01-2 2h-8a2 2 0 01-2-2v-4a2 2 0 012-2z"
+                    ></path>
+                  </svg>
+                  <span>60€ Boost (Instagram & Facebook)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer / Contact Section -->
+        <footer class="mt-20 md:mt-32 border-t border-slate-700 pt-10">
+          <div
+            class="flex flex-col md:flex-row items-center justify-center text-center md:text-left md:space-x-8"
+          >
+            <img
+              src="https://www.bitcryptics.online/about-endri.jpg"
+              alt="Endri"
+              class="w-32 h-32 rounded-full object-cover border-4 border-slate-600 mb-6 md:mb-0"
+            />
+            <div>
+              <h4 class="text-2xl font-bold text-white">
+                Gati për të filluar?
+              </h4>
+              <p class="text-slate-300 mt-2 mb-4 max-w-lg">
+                Më kontaktoni për një konsultë falas dhe për të diskutuar se si
+                mund ta transformojmë biznesin tuaj së bashku.
+              </p>
+              <div
+                class="flex items-center justify-center md:justify-start space-x-6 text-lg"
+              >
+                <!-- WhatsApp -->
+                <a
+                  href="https://wa.me/355698858963"
+                  target="_blank"
+                  class="flex items-center text-white hover:text-green-400 transition-colors"
+                >
+                  <svg
+                    class="w-6 h-6 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.456l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.803 6.12l-1.34 4.889 4.887-1.341z"
+                    ></path>
+                  </svg>
+                  <span>+355 69 885 8963</span>
+                </a>
+                <!-- Instagram -->
+                <a
+                  href="https://www.instagram.com/bcmarketing_al/"
+                  target="_blank"
+                  class="flex items-center text-white hover:text-pink-400 transition-colors"
+                >
+                  <svg
+                    class="w-6 h-6 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"
+                    ></path>
+                  </svg>
+                  <span>@bcmarketing_al</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
