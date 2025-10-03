@@ -480,6 +480,10 @@
         font-weight: 900;
         color: var(--text-primary);
         margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .pricing-price span {
@@ -766,7 +770,6 @@
     </style>
   </head>
   <body>
-    <!-- Navigation -->
     <nav id="navbar">
       <div class="container">
         <div class="nav-container">
@@ -790,7 +793,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="hero">
       <div class="container">
         <div class="hero-content">
@@ -809,7 +811,6 @@
       </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
       <div class="container">
         <div class="section-header fade-in">
@@ -877,17 +878,17 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
     <section id="pricing">
       <div class="container">
         <div class="section-header fade-in">
           <span class="section-badge">
-            <i class="fas fa-tag"></i> Oferta Speciale
+            <i class="fas fa-tag"></i> Ofertat e Vjeshtës -35%
           </span>
           <h2 class="section-title">Paketat Tona Profesionale</h2>
           <p class="section-subtitle">
-            Çdo paketë është dizajnuar për të rritur prezencën tuaj online dhe
-            për të automatizuar proceset e biznesit.
+            Përfitoni nga ofertat speciale! Çdo paketë është dizajnuar për të
+            rritur prezencën tuaj online dhe për të automatizuar proceset e
+            biznesit.
           </p>
         </div>
 
@@ -898,6 +899,15 @@
               <p class="pricing-subtitle">Rritje & Optimizim</p>
             </div>
             <div class="pricing-price">
+              <del
+                style="
+                  font-size: 1.5rem;
+                  color: var(--text-secondary);
+                  margin-right: 1rem;
+                  font-weight: 400;
+                "
+                >308€</del
+              >
               200€
               <span>/ muaj</span>
             </div>
@@ -929,6 +939,15 @@
               <p class="pricing-subtitle">Automatizim & Fuqi Maksimale</p>
             </div>
             <div class="pricing-price">
+              <del
+                style="
+                  font-size: 1.5rem;
+                  color: var(--text-secondary);
+                  margin-right: 1rem;
+                  font-weight: 400;
+                "
+                >585€</del
+              >
               380€
               <span>/ muaj</span>
             </div>
@@ -960,7 +979,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
       <div class="container">
         <div class="about-grid">
@@ -1025,7 +1043,6 @@
       </div>
     </section>
 
-    <!-- Partners Section -->
     <section id="partners">
       <div class="container">
         <div class="section-header fade-in">
@@ -1067,7 +1084,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <div class="container">
         <div class="section-header fade-in">
@@ -1099,14 +1115,12 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="container">
         <p>&copy; 2025 BC Digital. Të gjitha të drejtat e rezervuara.</p>
       </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/355698858963" target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
