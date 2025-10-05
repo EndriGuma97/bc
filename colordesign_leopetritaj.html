@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Analizë e thelluar e profilit dixhital për colordesign_leopetritaj dhe plani strategjik i BC Digital për rritjen e shitjeve."
+    />
+    <meta
+      name="keywords"
+      content="analizë instagram, marketing dixhital, strategji permiresimi, bc digital, colordesign_leopetritaj"
+    />
+    <meta name="author" content="BC Digital - Endri" />
+    <meta
+      property="og:title"
+      content="BC Digital - Analizë Strategjike për Color Design Leo Petritaj"
+    />
+    <meta
+      property="og:description"
+      content="Zbuloni pikat e forta, pikat e dobëta dhe planin tonë të veprimit për të transformuar prezencën tuaj online."
+    />
+    <meta
+      property="og:image"
+      content="https://www.bitcryptics.online/logo.png"
+    />
+    <title>BC Digital | Analizë Strategjike: colordesign_leopetritaj</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #ec4899;
+        --dark: #0f172a;
+        --dark-light: #1e293b;
+        --glass: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--dark);
+        color: var(--text-secondary);
+        overflow-x: hidden;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(99, 102, 241, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(236, 72, 153, 0.1) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(15, 23, 42, 0.8);
+        border-bottom: 1px solid var(--glass-border);
+      }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .logo img {
+        height: 50px;
+        width: auto;
+        background: white;
+        padding: 8px;
+        border-radius: 12px;
+      }
+      #hero {
+        padding: 160px 0 80px;
+        text-align: center;
+      }
+      .hero-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+      }
+      .hero-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.25rem);
+        color: var(--text-secondary);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        background: var(--gradient-1);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 50px rgba(99, 102, 241, 0.4);
+      }
+      section {
+        padding: 80px 0;
+        position: relative;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .section-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .analysis-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .analysis-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        padding: 2rem;
+      }
+      .analysis-card h3 {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+      }
+      .analysis-card h3 i {
+        margin-right: 1rem;
+        width: 30px;
+      }
+      .analysis-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .analysis-card ul li {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        text-align: left;
+      }
+      .strong-points h3 i {
+        color: #25d366;
+      }
+      .weak-points h3 i {
+        color: #f5576c;
+      }
+      .plan-section {
+        background: var(--dark-light);
+      }
+      .plan-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .plan-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-color: var(--primary);
+      }
+      .plan-card h3 {
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+      }
+      .plan-card p strong {
+        color: var(--text-primary);
+      }
+      #contact {
+        background: var(--gradient-1);
+        color: white;
+      }
+      #contact .section-title,
+      #contact .section-subtitle {
+        color: white;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      footer {
+        padding: 3rem 0;
+        text-align: center;
+        border-top: 1px solid var(--glass-border);
+      }
+      @media (max-width: 768px) {
+        .analysis-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        section {
+          padding: 60px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="BC Digital Logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Analizë Dixhitale: Color Design - Leo Petritaj
+          </h1>
+          <p class="hero-subtitle">
+            Një vështrim i thelluar mbi prezencën tuaj online dhe hapat
+            strategjikë që do të ndërmarrim për të rritur ndikimin dhe për të
+            tërhequr më shumë klientë.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="analysis">
+        <div class="container">
+          <div class="analysis-grid">
+            <div class="analysis-card strong-points">
+              <h3><i class="fas fa-check-circle"></i>Pikat e Forta</h3>
+              <ul>
+                <li>
+                  <strong>Identitet i Qartë Biznesi:</strong> Profili komunikon
+                  qartë se ofron shërbime lyerjeje, punime dekorative dhe përdor
+                  materiale ndërtimi cilësore, duke e bërë të kuptueshëm
+                  menjëherë për vizitorët.
+                </li>
+                <li>
+                  <strong>Përmbajtje Autentike dhe e Larmishme:</strong>
+                  Përdorimi i formateve të ndryshme (Reels, foto, karusel) për
+                  të treguar procesin e punës, rezultatet "para/pas" dhe pamje
+                  nga prapaskenat ndërton besim dhe transparencë te klientët.
+                </li>
+                <li>
+                  <strong>Kredibilitet i Lartë:</strong> Përmendja e
+                  partneriteteve me marka të njohura si Dinova, Giorgio Graesan
+                  dhe Benjamin Moore tregon legjitimitet dhe një angazhim për të
+                  punuar me materiale të cilësisë së lartë.
+                </li>
+                <li>
+                  <strong>Organizim i Mirë i Portofolit:</strong> Përdorimi i
+                  "Highlights" për të grupuar punimet dhe markat është një
+                  mënyrë efikase për të organizuar portofolin dhe për t'i
+                  ndihmuar klientët të gjejnë shërbimet që kërkojnë.
+                </li>
+                <li>
+                  <strong>Prezencë e Theksuar Lokale:</strong> Vendndodhja e
+                  qartë (Shqipëri) dhe përdorimi i gjuhës shqipe ndihmojnë në
+                  tërheqjen e klientëve lokalë.
+                </li>
+              </ul>
+            </div>
+            <div class="analysis-card weak-points">
+              <h3><i class="fas fa-exclamation-triangle"></i>Pikat e Dobëta</h3>
+              <ul>
+                <li>
+                  <strong>Mungesë Konsistence Vizuale:</strong> Pamja e
+                  përgjithshme e profilit është kaotike dhe joprofesionale për
+                  shkak të përzierjes së fotove me cilësi të ndryshme, ndriçimit
+                  të dobët, videove të paqëndrueshme dhe përmbajtjes personale
+                  të përzier me atë profesionale.
+                </li>
+                <li>
+                  <strong>Bio e Paoptimizuar:</strong> Biografia është e
+                  mbingarkuar, e paqartë dhe i mungon një thirrje e fortë për
+                  veprim (Call to Action). Përdorimi i hashtageve në bio zë
+                  hapësirë të vlefshme pa funksion.
+                </li>
+                <li>
+                  <strong>Angazhim i Ulët:</strong> Angazhimi në postime
+                  (pëlqime dhe komente) duket i ulët në krahasim me numrin e
+                  ndjekësve, gjë që tregon se përmbajtja nuk po arrin
+                  potencialin e saj.
+                </li>
+                <li>
+                  <strong>Përmbajtje pa Fokus të Qartë:</strong> Përdorimi i
+                  shpeshtë i meme-ve dhe postimeve pa një përshkrim të qartë e
+                  largon fokusin nga portofoli profesional, duke e bërë profilin
+                  më pak tërheqës për klientët potencialë.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plan-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Plani Ynë Strategjik për Rritje</h2>
+            <p class="section-subtitle">
+              Bazuar në analizën e mësipërme, këto janë hapat konkretë që do të
+              ndërmarrim për të transformuar llogarinë tuaj në një magnet
+              klientësh.
+            </p>
+          </div>
+
+          <div class="plan-card">
+            <h3>1. Ndërtimi i një Imazhi Profesional dhe Konsistent</h3>
+            <p>
+              <strong>Problemi:</strong> Pamja kaotike dhe cilësia e ulët e
+              përmbajtjes nuk pasqyrojnë cilësinë e punës suaj. <br /><strong
+                >Zgjidhja Jonë:</strong
+              >
+              Duke përdorur shërbimin tonë të
+              <strong>Menaxhimit të Rrjeteve Sociale</strong> dhe krijimit të
+              <strong>Përmbajtjes me AI</strong>, ne do të krijojmë një tematikë
+              vizuale profesionale. Do të editojmë videot tuaja për t'i bërë më
+              dinamike dhe do të përmirësojmë fotot për të nxjerrë në pah punën
+              tuaj. Profili juaj do të duket si një portofol dixhital elitar.
+            </p>
+          </div>
+
+          <div class="plan-card">
+            <h3>2. Tërheqja e Klientëve të Duhur</h3>
+            <p>
+              <strong>Problemi:</strong> Angazhimi i ulët tregon se përmbajtja
+              nuk po arrin audiencën e duhur dhe të interesuar. <br /><strong
+                >Zgjidhja Jonë:</strong
+              >
+              Përmes shërbimit tonë të
+              <strong>Marketingut të Targetuar</strong>, ne do të ndalojmë
+              reklamimin e përgjithshëm. Do të krijojmë fushata specifike që u
+              shfaqen vetëm njerëzve në zonën tuaj që po kërkojnë aktivisht për
+              "lyerje dekorative", "rinovim apartamenti", etj. Çdo euro e
+              shpenzuar do të shkojë drejt një klienti potencial.
+            </p>
+          </div>
+
+          <div class="plan-card">
+            <h3>3. Krijimi i një Ekosistemi të Plotë Dixhital</h3>
+            <p>
+              <strong>Problemi:</strong> Rrjetet sociale janë vetëm një pjesë.
+              Pa një "shtëpi" dixhitale, ju humbisni klientë që kërkojnë në
+              Google. <br /><strong>Zgjidhja Jonë:</strong> Ne do të
+              <strong>ndërtojmë një website profesional</strong> (si shembulli
+              që diskutuam) dhe do ta <strong>optimizojmë me SEO</strong>. Kjo
+              do të thotë që kur dikush kërkon në Google për shërbimet tuaja, ju
+              do të dilni në krye të rezultateve. Instagrami do të tërheqë
+              klientët, ndërsa faqja e internetit do t'i konvertojë ata në
+              shitje.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Gati për të Filluar Transformimin?</h2>
+            <p class="section-subtitle" style="color: white">
+              Ky plan është vetëm fillimi. Kontaktoni me ne për të diskutuar se
+              si mund ta vëmë në zbatim këtë strategji dhe për të filluar
+              rritjen e biznesit tuaj.
+            </p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+              <a href="https://wa.me/355698858963" target="_blank"
+                >+355 69 885 8963</a
+              >
+            </div>
+            <div class="contact-card">
+              <h3><i class="fas fa-phone-alt"></i> Telefon</h3>
+              <a href="tel:+355698858963">+355 69 885 8963</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 BC Digital. Të gjitha të drejtat e rezervuara.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Fade In Animation on Scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
