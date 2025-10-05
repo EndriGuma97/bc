@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zbuloni Paketën Tonë Dixhitale për bizneset. Krijim website, SEO, menaxhim profesional i rrjeteve sociale dhe marketing me AI nga BC Digital."
+    />
+    <meta
+      name="keywords"
+      content="paketë dixhitale, krijim website shqipëri, seo shqipëri, marketing dixhital, menaxhim rrjete sociale, publicitet online"
+    />
+    <meta name="author" content="BC Digital - Endri" />
+    <meta
+      property="og:title"
+      content="BC Digital - Paketa e Plotë Dixhitale për Biznesin Tuaj"
+    />
+    <meta
+      property="og:description"
+      content="Transformoni prezencën tuaj online me një website profesional, SEO, menaxhim rrjetesh sociale dhe përmbajtje të krijuar me AI."
+    />
+    <meta
+      property="og:image"
+      content="https://www.bitcryptics.online/logo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.bitcryptics.online/clients.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.bitcryptics.online/clients.html" />
+    <title>BC Digital - Paketa e Plotë Dixhitale | Website & Marketing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #ec4899;
+        --dark: #0f172a;
+        --dark-light: #1e293b;
+        --glass: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--dark);
+        color: var(--text-secondary);
+        overflow-x: hidden;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(99, 102, 241, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(236, 72, 153, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(79, 70, 229, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+      .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(15, 23, 42, 0.8);
+        border-bottom: 1px solid var(--glass-border);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      nav.scrolled {
+        background: rgba(15, 23, 42, 0.95);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        position: relative;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        z-index: 1002;
+      }
+      .logo img {
+        height: 50px;
+        width: auto;
+        background: white;
+        padding: 8px;
+        border-radius: 12px;
+      }
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s;
+        padding: 0.5rem 0;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-1);
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--text-primary);
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1002;
+      }
+      .menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background: var(--text-primary);
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+      }
+      #hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+      #hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("hero.jpg"); /* You can change this background */
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+      .hero-content {
+        text-align: center;
+        animation: fadeInUp 1s ease;
+      }
+      .hero-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+      }
+      .hero-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.5rem);
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        background: var(--gradient-1);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 50px rgba(99, 102, 241, 0.4);
+      }
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.6s;
+      }
+      .btn-primary:hover::before {
+        left: 100%;
+      }
+      section {
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+      .section-badge {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 50px;
+        font-size: 0.875rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(10px);
+      }
+      .section-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .section-subtitle {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+      .feature-grid {
+        display: grid;
+        gap: 4rem;
+        align-items: center;
+        margin-top: 4rem;
+      }
+      .feature-grid .feature-content {
+        text-align: left;
+      }
+      .feature-grid .feature-content h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+      }
+      .feature-grid .feature-content p {
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .feature-grid .feature-media {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 1rem;
+        backdrop-filter: blur(10px);
+      }
+      .feature-grid .feature-media img,
+      .feature-grid .feature-media video {
+        width: 100%;
+        border-radius: 16px;
+        display: block;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+      .feature-grid .feature-media a {
+        display: block;
+        text-align: center;
+        padding-top: 1rem;
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .feature-grid .feature-media a:hover {
+        text-decoration: underline;
+      }
+      .feature-list {
+        list-style: none;
+        margin-top: 1.5rem;
+      }
+      .feature-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+      .feature-list i {
+        color: var(--primary);
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        font-size: 1.2rem;
+      }
+      .steps-container {
+        max-width: 800px;
+        margin: 4rem auto 0;
+      }
+      .step {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      .step h4 {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+      }
+      .step h4 span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: var(--gradient-1);
+        color: white;
+        border-radius: 50%;
+        font-weight: 700;
+        margin-right: 1rem;
+      }
+      #contact {
+        background: var(--gradient-1);
+        color: white;
+      }
+      #contact .section-title,
+      #contact .section-subtitle {
+        color: white;
+      }
+      .contact-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .contact-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .contact-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .contact-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .contact-card a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+      footer {
+        padding: 3rem 0;
+        text-align: center;
+        border-top: 1px solid var(--glass-border);
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s;
+        z-index: 999;
+        animation: pulse 2s infinite;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+      .fade-in {
+        animation: fadeInUp 0.8s ease forwards;
+        opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+        .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 0;
+          flex-direction: column;
+          background: var(--dark);
+          width: 100%;
+          height: 100vh;
+          padding: 100px 20px 20px;
+          transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          gap: 1.5rem;
+          border-right: 1px solid var(--glass-border);
+        }
+        .nav-menu.active {
+          left: 0;
+        }
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+        .feature-grid.reverse .feature-content {
+          order: 2;
+        }
+        .feature-grid.reverse .feature-media {
+          order: 1;
+        }
+        section {
+          padding: 60px 0;
+        }
+        .section-header {
+          margin-bottom: 3rem;
+        }
+        .whatsapp-float {
+          width: 55px;
+          height: 55px;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+      @media (min-width: 768px) {
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .feature-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="BC Digital Logo" />
+            </a>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Ballina</a></li>
+            <li>
+              <a href="clients.html" class="nav-link active"
+                >Paketa Dixhitale</a
+              >
+            </li>
+            <li><a href="index.html#contact" class="nav-link">Kontakti</a></li>
+          </ul>
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Paketa Juaj e Plotë Dixhitale</h1>
+          <p class="hero-subtitle">
+            Nga një website profesional te marketingu në rrjetet sociale, ne
+            kujdesemi për gjithçka. Fokusohuni te biznesi juaj, ne kujdesemi për
+            prezencën tuaj online.
+          </p>
+          <a href="#contact" class="btn-primary">
+            Filloni Tani
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="package-details">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-badge">
+              <i class="fas fa-star"></i> Gjithçka-në-Një
+            </span>
+            <h2 class="section-title">Çfarë Përfshin Paketa?</h2>
+            <p class="section-subtitle">
+              Një zgjidhje e integruar për të ndërtuar një markë të fortë, për
+              të tërhequr klientë dhe për t'u rritur në botën dixhitale.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-content fade-in">
+              <h3>
+                <i
+                  class="fas fa-globe"
+                  style="margin-right: 1rem; color: var(--primary)"
+                ></i
+                >Krijimi i Website Profesional
+              </h3>
+              <p>
+                Një website modern, i shpejtë dhe i përshtatur për celularin
+                është porta juaj kryesore për klientët. Ne ndërtojmë një faqe që
+                jo vetëm duket bukur, por gjithashtu tregon qartë shërbimet dhe
+                vlerat tuaja.
+              </p>
+              <p>
+                <strong>Shembull:</strong> Ne kemi ndërtuar
+                <a
+                  href="https://gipslyerjeelektrike.com"
+                  target="_blank"
+                  style="color: var(--primary); font-weight: bold"
+                  >gipslyerjeelektrike.com</a
+                >, një faqe e pastër dhe efektive që i solli klientit tonë një
+                prezencë profesionale online.
+              </p>
+            </div>
+            <div class="feature-media fade-in">
+              <a href="https://gipslyerjeelektrike.com" target="_blank">
+                <img
+                  src="gipslyerjeelektrike-website.png"
+                  alt="Shembull i website gipslyerjeelektrike.com"
+                />
+                <span>Shiko Projektin Live</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="feature-grid reverse">
+            <div class="feature-media fade-in">
+              <img src="seo-example.png" alt="Optimizimi SEO për Google" />
+            </div>
+            <div class="feature-content fade-in">
+              <h3>
+                <i
+                  class="fas fa-search-dollar"
+                  style="margin-right: 1rem; color: var(--primary)"
+                ></i
+                >Optimizimi SEO (për Fillestarët)
+              </h3>
+              <p>
+                <strong>Çfarë është SEO?</strong> Imagjinoni Google si një
+                qendër tregtare gjigante. SEO (Search Engine Optimization) është
+                procesi që e vendos dyqanin tuaj (faqen tuaj të internetit) në
+                katin e parë, aty ku kalojnë të gjithë klientët.
+              </p>
+              <p>
+                Ne e optimizojmë faqen tuaj me fjalët kyçe që klientët tuaj
+                kërkojnë (p.sh., "punime gipsi Tiranë"), në mënyrë që kur ata të
+                kërkojnë në Google, ju të dilni ndër të parët. Më shumë
+                shikueshmëri, më shumë klientë!
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-content fade-in">
+              <h3>
+                <i
+                  class="fas fa-camera-retro"
+                  style="margin-right: 1rem; color: var(--primary)"
+                ></i
+                >Përmbajtje Profesionale me AI
+              </h3>
+              <p>
+                Pamja ka rëndësi. Ne përdorim Inteligjencën Artificiale për të
+                krijuar imazhe profesionale që ju prezantojnë si ekspert në
+                fushën tuaj, edhe nëse nuk keni foto të cilësisë së lartë.
+              </p>
+              <p>
+                Po ashtu, krijojmë video dinamike dhe tërheqëse që kapin
+                vëmendjen e audiencës në rrjetet sociale, duke i kthyer videot e
+                thjeshta në reklama profesionale.
+              </p>
+            </div>
+            <div class="feature-media fade-in">
+              <img src="fotodito.png" alt="Shembull i fotos së krijuar me AI" />
+              <a href="https://www.instagram.com/p/DPbeNKhDAMi/" target="_blank"
+                >Shiko Shembullin e Editimit të Videos</a
+              >
+            </div>
+          </div>
+
+          <div class="feature-grid reverse">
+            <div class="feature-media fade-in">
+              <a
+                href="https://www.instagram.com/dito_gips_lyerje_elektrike/"
+                target="_blank"
+              >
+                <img
+                  src="instagram-example.png"
+                  alt="Shembull i profilit profesional në Instagram"
+                />
+                <span>Shiko Profilin Profesional</span>
+              </a>
+            </div>
+            <div class="feature-content fade-in">
+              <h3>
+                <i
+                  class="fas fa-bullhorn"
+                  style="margin-right: 1rem; color: var(--primary)"
+                ></i
+                >Marketing në Rrjetet Sociale
+              </h3>
+              <p>
+                Një faqe e bukur nuk mjafton. Ne e promovojmë biznesin tuaj aty
+                ku ndodhen klientët: në
+                <strong>Instagram, Facebook dhe TikTok.</strong>
+              </p>
+              <ul class="feature-list">
+                <li>
+                  <i class="fab fa-instagram"></i>
+                  <div>
+                    <strong>Menaxhim Profesional:</strong> E kthejmë profilin
+                    tuaj në një portofol dixhital mbresëlënës.
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-users"></i>
+                  <div>
+                    <strong>Targetim i Audiencës:</strong> Reklamat tuaja i
+                    shfaqen vetëm njerëzve të interesuar për shërbimet tuaja, në
+                    zonën tuaj, duke mos shpërdoruar asnjë qindarkë.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" style="background: var(--dark-light)">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-badge">
+              <i class="fas fa-shield-alt"></i> Siguri & Transparencë
+            </span>
+            <h2 class="section-title">Si Funksionon Bashkëpunimi?</h2>
+            <p class="section-subtitle">
+              Ne e bëjmë procesin sa më të thjeshtë dhe të sigurt për ju.
+              Transparenca është thelbësore për ne.
+            </p>
+          </div>
+
+          <div class="steps-container">
+            <div class="step fade-in">
+              <h4><span>1</span>Marrëveshja e Shërbimit (SLA)</h4>
+              <p>
+                Para se të fillojmë, ne nënshkruajmë një marrëveshje të qartë
+                (Service Level Agreement) ku përcaktohen të gjitha shërbimet,
+                afatet dhe kushtet. Kjo ju mbron juve dhe siguron që ne do të
+                ofrojmë saktësisht atë që kemi premtuar.
+              </p>
+            </div>
+            <div class="step fade-in">
+              <h4><span>2</span>Dhënia e Aksesit (në Mënyrë të Sigurt)</h4>
+              <p>
+                Për të menaxhuar rrjetet tuaja sociale, na duhet akses.
+                <strong>Mos u shqetësoni, ne ju udhëzojmë hap pas hapi!</strong>
+                Ky proces është i thjeshtë dhe i sigurt, dhe ju mbani gjithmonë
+                pronësinë e plotë të faqeve tuaja.
+              </p>
+              <ul class="feature-list" style="font-size: 0.9rem">
+                <li>
+                  <i class="fab fa-facebook-f"></i>
+                  <div>
+                    <strong>Për Facebook & Instagram:</strong> Nëse janë të
+                    lidhura, ju na shtoni si 'Partner' ose 'Admin' përmes Meta
+                    Business Suite. Ne ju dërgojmë një guidë me video ose e
+                    bëjmë bashkë me ju përmes një telefonate.
+                  </div>
+                </li>
+                <li>
+                  <i class="fab fa-tiktok"></i>
+                  <div>
+                    <strong>Për TikTok:</strong> Ju mund të na jepni akses si
+                    'Menaxher' nga cilësimet e reklamave. Edhe këtu, ne ju
+                    asistojmë plotësisht.
+                  </div>
+                </li>
+              </ul>
+              <p
+                style="
+                  margin-top: 1rem;
+                  font-weight: bold;
+                  color: var(--text-primary);
+                "
+              >
+                Shënim: Ne nuk kërkojmë kurrë fjalëkalimin tuaj personal!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Gati për të Filluar?</h2>
+          <p class="section-subtitle">
+            Kontaktoni me ne sot për një konsultë falas dhe zbuloni se si mund
+            ta transformojmë biznesin tuaj.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card fade-in">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/355698858963" target="_blank"
+              >+355 69 885 8963</a
+            >
+          </div>
+          <div class="contact-card fade-in">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Telefon</h3>
+            <a href="tel:+355698858963">+355 69 885 8963</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 BC Digital. Të gjitha të drejtat e rezervuara.</p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/355698858963" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      // Mobile Menu Toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.querySelector(".nav-menu");
+      const navLinks = document.querySelectorAll(".nav-link");
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Navbar Scroll Effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Fade In Animation on Scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
