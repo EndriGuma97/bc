@@ -410,6 +410,39 @@
         font-weight: 700;
         margin-right: 1rem;
       }
+      /* Pricing Display Section */
+      .pricing-display {
+        text-align: center;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        max-width: 500px;
+        margin: 2rem auto 0;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+      .pricing-display:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+      .price-value {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(3.5rem, 10vw, 5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        line-height: 1;
+        background: var(--gradient-2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .price-period {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
       #contact {
         background: var(--gradient-1);
         color: white;
@@ -753,6 +786,24 @@
         </div>
       </section>
 
+      <section id="pricing">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="section-badge">
+              <i class="fas fa-euro-sign"></i> Investim i Qartë
+            </span>
+            <h2 class="section-title">Një Çmim Fiks, Pa Surpriza</h2>
+            <p class="section-subtitle">
+              Përfitoni të gjitha shërbimet e përmendura më lart në një paketë
+              të vetme me një çmim transparent mujor.
+            </p>
+          </div>
+          <div class="pricing-display fade-in">
+            <div class="price-value">200€</div>
+            <div class="price-period">/ muaj</div>
+          </div>
+        </div>
+      </section>
       <section id="process" style="background: var(--dark-light)">
         <div class="container">
           <div class="section-header fade-in">
