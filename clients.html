@@ -317,7 +317,7 @@
       .section-subtitle {
         font-size: 1.125rem;
         color: var(--text-secondary);
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
         line-height: 1.7;
       }
@@ -410,38 +410,126 @@
         font-weight: 700;
         margin-right: 1rem;
       }
-      /* Pricing Display Section */
-      .pricing-display {
-        text-align: center;
+      /* Pricing Section Styles */
+      #pricing {
+        background: var(--dark-light);
+      }
+      .pricing-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+        align-items: center;
+      }
+      .pricing-card {
         background: var(--glass);
         border: 1px solid var(--glass-border);
         border-radius: 24px;
         padding: 3rem 2rem;
-        max-width: 500px;
-        margin: 2rem auto 0;
+        text-align: center;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
       }
-      .pricing-display:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
       }
-      .price-value {
+      .pricing-card.featured {
+        border: 2px solid var(--primary);
+        transform: scale(1.05);
+      }
+      .pricing-card.featured:hover {
+        transform: scale(1.05) translateY(-10px);
+      }
+      .pricing-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--gradient-1);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .pricing-header {
+        margin-bottom: 2rem;
+      }
+      .pricing-title {
         font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(3.5rem, 10vw, 5rem);
+        font-size: 1.75rem;
         font-weight: 700;
         color: var(--text-primary);
-        line-height: 1;
-        background: var(--gradient-2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        margin-bottom: 0.5rem;
       }
-      .price-period {
-        font-size: 1.5rem;
+      .pricing-subtitle {
+        color: var(--primary);
+        font-weight: 600;
+        min-height: 40px;
+      }
+      .pricing-price {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .pricing-price span {
+        font-size: 1rem;
+        font-weight: 400;
         color: var(--text-secondary);
-        font-weight: 500;
-        margin-top: 0.5rem;
+      }
+      .pricing-features {
+        list-style: none;
+        margin-bottom: 2.5rem;
+        text-align: left;
+        flex-grow: 1;
+      }
+      .pricing-features li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+      }
+      .pricing-features i {
+        color: var(--primary);
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+      .btn-pricing {
+        width: 100%;
+        padding: 1rem;
+        background: var(--glass);
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s;
+        display: block;
+        margin-top: auto;
+      }
+      .btn-pricing:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+      }
+      .pricing-card.featured .btn-pricing {
+        background: var(--gradient-1);
+        color: white;
+        border: none;
       }
       #contact {
         background: var(--gradient-1);
@@ -536,6 +624,11 @@
         animation: fadeInUp 0.8s ease forwards;
         opacity: 0;
       }
+      @media (max-width: 991px) {
+        .pricing-card.featured {
+          transform: none;
+        }
+      }
       @media (max-width: 768px) {
         .menu-toggle {
           display: flex;
@@ -556,7 +649,8 @@
         .nav-menu.active {
           left: 0;
         }
-        .feature-grid {
+        .feature-grid,
+        .pricing-grid {
           grid-template-columns: 1fr;
         }
         .feature-grid.reverse .feature-content {
@@ -576,6 +670,11 @@
           height: 55px;
           bottom: 20px;
           right: 20px;
+        }
+      }
+      @media (min-width: 992px) {
+        .pricing-grid {
+          grid-template-columns: 1fr 1fr;
         }
       }
       @media (min-width: 768px) {
@@ -624,8 +723,8 @@
             kujdesemi për gjithçka. Fokusohuni te biznesi juaj, ne kujdesemi për
             prezencën tuaj online.
           </p>
-          <a href="#contact" class="btn-primary">
-            Filloni Tani
+          <a href="#pricing" class="btn-primary">
+            Shiko Planet
             <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -639,10 +738,11 @@
             <span class="section-badge">
               <i class="fas fa-star"></i> Gjithçka-në-Një
             </span>
-            <h2 class="section-title">Çfarë Përfshin Paketa?</h2>
+            <h2 class="section-title">Paketa Avancuar: Çfarë Përfshihet?</h2>
             <p class="section-subtitle">
-              Një zgjidhje e integruar për të ndërtuar një markë të fortë, për
-              të tërhequr klientë dhe për t'u rritur në botën dixhitale.
+              Më poshtë gjeni në detaje të gjitha shërbimet e përfshira në këtë
+              paketë, të dizajnuara për t'ju dhënë një prezencë të fuqishme
+              online.
             </p>
           </div>
 
@@ -786,25 +886,81 @@
         </div>
       </section>
 
-      <section id="pricing">
+      <section id="pricing" style="background: var(--dark-light)">
         <div class="container">
           <div class="section-header fade-in">
-            <span class="section-badge">
-              <i class="fas fa-euro-sign"></i> Investim i Qartë
-            </span>
-            <h2 class="section-title">Një Çmim Fiks, Pa Surpriza</h2>
+            <span class="section-badge"
+              ><i class="fas fa-tags"></i> Planet Tona</span
+            >
+            <h2 class="section-title">Zgjidhni Paketën e Duhur Për Ju</h2>
             <p class="section-subtitle">
-              Përfitoni të gjitha shërbimet e përmendura më lart në një paketë
-              të vetme me një çmim transparent mujor.
+              Ne ofrojmë dy paketa të fuqishme për të plotësuar nevojat e
+              biznesit tuaj, nga prezenca fillestare dixhitale te automatizimi i
+              avancuar me AI.
             </p>
           </div>
-          <div class="pricing-display fade-in">
-            <div class="price-value">200€</div>
-            <div class="price-period">/ muaj</div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card fade-in">
+              <div class="pricing-header">
+                <h3 class="pricing-title">Pako Avancuar</h3>
+                <p class="pricing-subtitle">
+                  Ideale për një fillim të fuqishëm dixhital
+                </p>
+              </div>
+              <div class="pricing-price">200€<span>/ muaj</span></div>
+              <ul class="pricing-features">
+                <li>
+                  <i class="fas fa-check"></i>Ndërtim & Mirëmbajtje Faqe
+                  Interneti
+                </li>
+                <li><i class="fas fa-check"></i>Optimizim SEO për Google</li>
+                <li>
+                  <i class="fas fa-check"></i>Krijim Përmbajtje me AI (Foto &
+                  Video)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>Menaxhim & Publicitet në Rrjete
+                  Sociale
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>Marrëveshje e Shërbimit (SLA)
+                </li>
+              </ul>
+              <a href="#contact" class="btn-pricing">Zgjidhni Paketën</a>
+            </div>
+
+            <div class="pricing-card featured fade-in">
+              <span class="pricing-badge">Më e Popullarizuar</span>
+              <div class="pricing-header">
+                <h3 class="pricing-title">Pako Premium AI</h3>
+                <p class="pricing-subtitle">Automatizim & Fuqi Maksimale</p>
+              </div>
+              <div class="pricing-price">380€<span>/ muaj</span></div>
+              <ul class="pricing-features">
+                <li>
+                  <i class="fas fa-check"></i
+                  ><strong>Custom AI Chatbot</strong> (Asistent Virtual)
+                </li>
+                <li><i class="fas fa-check"></i>Gjithçka nga Pako Avancuar</li>
+                <li>
+                  <i class="fas fa-check"></i>Ndërtim Automatizimesh për
+                  Biznesin
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>Platforma
+                  <strong>Zoho One</strong> (mjete menaxhimi)
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>Boost me targeting të avancuar
+                </li>
+              </ul>
+              <a href="#contact" class="btn-pricing">Zgjidhni Premium</a>
+            </div>
           </div>
         </div>
       </section>
-      <section id="process" style="background: var(--dark-light)">
+      <section id="process">
         <div class="container">
           <div class="section-header fade-in">
             <span class="section-badge">
