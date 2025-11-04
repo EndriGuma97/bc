@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BC Digital - Pako e re marketingu e personalizuar për biznesin tuaj."
+    />
+    <title>Pako Marketingu Custom & Strategjia - BC Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #ec4899;
+        --dark: #0f172a;
+        --dark-light: #1e293b;
+        --glass: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #ffffff;
+        --text-secondary: #94a3b8;
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--dark);
+        color: var(--text-secondary);
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 20% 80%,
+            rgba(99, 102, 241, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(236, 72, 153, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 40% 40%,
+            rgba(79, 70, 229, 0.05) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Stilet e Seksionit */
+      section {
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+
+      .section-badge {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 50px;
+        font-size: 0.875rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(10px);
+      }
+
+      .section-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .section-subtitle {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* Seksioni i Çmimit */
+      #new-pricing {
+        padding-bottom: 50px;
+      }
+
+      .pricing-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 3rem;
+        justify-content: center; /* Qendron kartën e vetme */
+      }
+
+      .pricing-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+        max-width: 500px; /* Kufizon gjerësinë për një kartë të vetme */
+      }
+
+      .pricing-card.featured {
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.1) 0%,
+          rgba(236, 72, 153, 0.1) 100%
+        );
+        border: 2px solid var(--primary);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: -15px;
+        right: 2rem;
+        background: var(--gradient-1);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      .pricing-header {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .pricing-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .pricing-subtitle {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .pricing-price {
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .pricing-price span {
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--text-secondary);
+        margin-left: 0.5rem;
+      }
+
+      .pricing-features {
+        list-style: none;
+        margin-bottom: 2rem;
+      }
+
+      .pricing-features li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .pricing-features i {
+        color: var(--primary);
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+
+      .btn-pricing {
+        width: 100%;
+        padding: 1rem;
+        background: var(--glass);
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s;
+        display: block;
+      }
+
+      .btn-pricing:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+      }
+
+      .pricing-card.featured .btn-pricing {
+        background: var(--gradient-1);
+        color: white;
+        border: none;
+      }
+
+      /* Seksioni i Strategjisë (Accordion) */
+      #strategy {
+        padding-top: 50px;
+      }
+
+      .accordion-container {
+        max-width: 800px;
+        margin: 3rem auto 0;
+      }
+
+      .accordion-item {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .accordion-item:hover {
+        border-color: rgba(99, 102, 241, 0.3);
+      }
+
+      .accordion-header {
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: 1.5rem;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-header i {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-header.active i {
+        transform: rotate(45deg);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .accordion-content p {
+        padding: 0 1.5rem 1.5rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .strategy-list {
+        list-style: none;
+        padding: 0 1.5rem 1.5rem;
+      }
+
+      .strategy-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.75rem;
+      }
+
+      .strategy-list i {
+        color: var(--primary);
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+      }
+
+      /* Animacionet */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease forwards;
+        opacity: 0;
+      }
+
+      /* Media Queries */
+      @media (min-width: 768px) {
+        .pricing-grid {
+          grid-template-columns: minmax(300px, 500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Seksioni i Çmimit -->
+    <section id="new-pricing">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-badge">
+            <i class="fas fa-star"></i> Ofertë e Re
+          </span>
+          <h2 class="section-title">Pako Marketingu Custom</h2>
+          <p class="section-subtitle">
+            Një paketë fleksibël e ndërtuar për nevojat tuaja specifike, me
+            çmime transparente.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card featured fade-in">
+            <span class="pricing-badge">Pako Fleksibël</span>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Pako Marketingu Custom</h3>
+              <p class="pricing-subtitle">Përshtatur për ju</p>
+            </div>
+            <div class="pricing-price">200€ <span>/ muaj</span></div>
+            <ul class="pricing-features">
+              <li>
+                <i class="fas fa-check"></i>
+                <strong>Menaxhim i Plotë Marketingu Dixhital:</strong>
+                Strategji, menaxhim i rrjeteve sociale, dhe më shumë.
+              </li>
+              <li>
+                <i class="fas fa-plus"></i>
+                <strong>Shërbim Fotografi Profesional:</strong> +40€ / për çdo
+                herë (opsionale sipas kërkesës).
+              </li>
+              <li>
+                <i class="fas fa-wallet"></i>
+                <strong>Buxheti i Reklamave (Boost):</strong> Paguhet direkt nga
+                klienti. Ju keni kontroll të plotë mbi shpenzimet e reklamave.
+              </li>
+              <li>
+                <i class="fas fa-chart-line"></i>
+                <strong>Optimizim i Vazhdueshëm & Raportim:</strong> Monitorim
+                dhe përshtatje e strategjisë për rezultate maksimale.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seksioni i Strategjisë -->
+    <section id="strategy">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-badge">
+            <i class="fas fa-cogs"></i> Plani i Veprimit
+          </span>
+          <h2 class="section-title">Strategjia Jonë në Veprim</h2>
+          <p class="section-subtitle">
+            Kjo është një përmbledhje e thjeshtuar e qasjes tonë të provuar për
+            të rritur shitjet tuaja, e ngjashme me strategjinë që kemi zhvilluar
+            për klientët tanë në tregun e filtrave të ujit.
+          </p>
+        </div>
+
+        <div class="accordion-container fade-in">
+          <!-- Elementi 1: Objektivi -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Objektivi ynë: Dominimi i Tregut
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Qëllimi ynë nuk është thjesht t'ju gjejmë klientë. Është të
+                ripozicionojmë biznesin tuaj në mendjen e konsumatorit. Ne
+                lëvizim fokusin nga "blerja e një produkti" te "zëvendësimi i
+                një kostoje ekzistuese", duke e bërë ofertën tuaj zgjidhjen më
+                të zgjuar financiare.
+              </p>
+            </div>
+          </div>
+
+          <!-- Elementi 2: Faza 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Faza 1: Gjenerimi i Kërkesës (Ndërgjegjësimi)
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Para se të shesim, duhet të edukojmë tregun. Ne krijojmë një
+                nevojë për zgjidhjen tuaj duke sulmuar pikat e dobëta të
+                konkurrencës.
+              </p>
+              <ul class="strategy-list">
+                <li>
+                  <i class="fas fa-video"></i>
+                  <strong>Fushata Video Virale:</strong> Krijojmë video të
+                  shkurtra e me ndikim (p.sh., "Kursimi Financiar" ose "Faji
+                  Mjedisor") për Facebook & Instagram.
+                </li>
+                <li>
+                  <i class="fas fa-star"></i>
+                  <strong>Marketing me Influencerë:</strong> Partneritet me
+                  influencues të besuar që dramatizojnë problemin dhe paraqesin
+                  zgjidhjen tuaj në mënyrë autentike.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Elementi 3: Faza 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Faza 2: Kapja e Kontakteve (Konsiderata)
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Tani që kemi vëmendjen e tyre, ne kapim informacionin e atyre që
+                janë aktivisht të interesuar.
+              </p>
+              <ul class="strategy-list">
+                <li>
+                  <i class="fab fa-google"></i>
+                  <strong>Google Ads (PPC):</strong> Ne "zotërojmë" Google për
+                  fjalët kyçe me qëllim të lartë (p.sh., "filtra uji me qera")
+                  dhe "vjedhim" trafikun e konkurrentëve tuaj (p.sh., "Ecosoft
+                  abonim").
+                </li>
+                <li>
+                  <i class="fas fa-bullseye"></i>
+                  <strong>Landing Pages (Faqe të dedikuara):</strong> E gjithë
+                  trafiku shkon në një faqe të optimizuar për konvertim me një
+                  ofertë të parezistueshme (p.sh., "Analizë Uji FALAS").
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Elementi 4: Faza 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Faza 3: Mbyllja e Shitjes (Konvertimi)
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Një kontakt (lead) nuk është një shitje. Shpejtësia dhe ndjekja
+                fitojnë. Ne e automatizojmë këtë proces për të konvertuar
+                interesin në fitim.
+              </p>
+              <ul class="strategy-list">
+                <li>
+                  <i class="fas fa-sms"></i>
+                  <strong>Automatizim SMS/Email:</strong> Sapo një klient
+                  plotëson formularin, ai merr një SMS/Email të menjëhershëm, i
+                  ndjekur nga një seri dëshmish dhe ofertash.
+                </li>
+                <li>
+                  <i class="fas fa-redo-alt"></i>
+                  <strong>Retargetim (Riorientim):</strong> Ne i ndjekim
+                  vizitorët kudo online (Facebook/Instagram) me reklama
+                  dëshmish: "Anisa kurseu 3,000 Lekë muajin e kaluar. Çfarë
+                  pret?"
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Elementi 5: Faza 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Faza 4: Strategjia B2B (Zyra & HoReCa)
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Ne përdorim një qasje të ndryshme për klientët e biznesit, duke
+                u fokusuar te kursimi i kostos dhe efikasiteti operacional.
+              </p>
+              <ul class="strategy-list">
+                <li>
+                  <i class="fab fa-linkedin"></i>
+                  <strong>LinkedIn Ads:</strong> Synojmë drejtpërdrejt "Menaxher
+                  Zyre" dhe "Pronar Restoranti" me mesazhe që fokusohen te ROI.
+                </li>
+                <li>
+                  <i class="fas fa-briefcase"></i>
+                  <strong>Mesazhi B2B:</strong> "Eliminoni kaosin dhe koston e
+                  bidonave 19L. Kaloni në një sistem me kosto fikse dhe zero
+                  logjistikë."
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Elementi 6: Matja -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Matja e Suksesit (Çfarë ka Rëndësi)
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Ne nuk fokusohemi te "pëlqimet". Ne matim atë që ka vlerë për
+                biznesin tuaj:
+              </p>
+              <ul class="strategy-list">
+                <li>
+                  <i class="fas fa-user-check"></i>
+                  <strong>CAC (Kostoja e Përfitimit të Klientit):</strong> Sa
+                  kushton saktësisht për të fituar një klient të ri.
+                </li>
+                <li>
+                  <i class="fas fa-hand-holding-usd"></i>
+                  <strong>LTV (Vlera Jetësore e Klientit):</strong> Sa fitim ju
+                  sjell ai klient gjatë gjithë kohës që qëndron me ju.
+                </li>
+                <li>
+                  <i class="fas fa-balance-scale"></i>
+                  <strong>Objektivi ynë i Artë:</strong> Të sigurohemi që vlera
+                  e klientit (LTV) të jetë të paktën 3 herë më e madhe se
+                  kostoja për ta fituar atë (CAC).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Animacioni Fade In
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = "0.1s";
+            entry.target.classList.add("fade-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Funksionaliteti i Accordion
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector("i");
+
+          // Mbyll të gjitha të tjerat
+          accordionHeaders.forEach((otherHeader) => {
+            if (otherHeader !== header) {
+              otherHeader.classList.remove("active");
+              otherHeader.nextElementSibling.style.maxHeight = null;
+              otherHeader.querySelector("i").classList.remove("fa-minus");
+              otherHeader.querySelector("i").classList.add("fa-plus");
+            }
+          });
+
+          // Hap ose mbyll këtë
+          if (content.style.maxHeight) {
+            // Mbyll
+            header.classList.remove("active");
+            content.style.maxHeight = null;
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          } else {
+            // Hap
+            header.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
