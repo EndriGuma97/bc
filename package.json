@@ -1,0 +1,10 @@
+{
+  "name": "bc-digital-payment",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Building...'"
+  },
+  "dependencies": {
+    "crypto": "latest"
+  }
+}
