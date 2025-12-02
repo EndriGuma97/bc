@@ -1,0 +1,26 @@
+const crypto = require('crypto'); export default async function handler(req,
+res) { // Only allow POST requests if (req.method !== 'POST') { return
+res.status(405).json({ error: 'Method not allowed' }); } try { const { amount,
+name, email } = req.body; // 1. Get secrets from Vercel Environment Variables
+const projectid = process.env.PAYSERA_PROJECT_ID; const sign_password =
+process.env.PAYSERA_PASSWORD; if (!projectid || !sign_password) { throw new
+Error('Paysera settings are missing in Vercel'); } // 2. Prepare data // Paysera
+needs the amount in Cents (10.00 EUR = 1000 cents) const amountInCents =
+Math.round(parseFloat(amount) * 100); const orderid = 'BC-' + Date.now(); //
+Creates a unique ID like BC-1733256000 // 3. URLs where users go after payment
+// ensure these match your actual domain const domain =
+'https://www.bitcryptics.online'; const accepturl = `${domain}/success.html`;
+const cancelurl = `${domain}/payments.html`; // 4. Build the parameter object
+const params = { projectid: projectid, orderid: orderid, accepturl: accepturl,
+cancelurl: cancelurl, version: '1.6', test: '0', // Set to '1' if you want to
+test fake money first p_firstname: name, p_email: email, amount: amountInCents,
+currency: 'EUR', country: 'AL', payment: '' // Empty means show all methods
+(Card/Bank) }; // 5. Create the special query string const queryString = new
+URLSearchParams(params).toString(); // 6. Encode to Base64 const data =
+Buffer.from(queryString).toString('base64'); // 7. Sign with MD5 (The Security
+Part) const sign = crypto .createHash('md5') .update(data + sign_password)
+.digest('hex'); // 8. Send the secure URL back to the frontend const redirectUrl
+= `https://www.paysera.com/pay/?data=${data}&sign=${sign}`;
+res.status(200).json({ url: redirectUrl }); } catch (error) {
+console.error(error); res.status(500).json({ error: 'Internal Server Error' });
+} }
