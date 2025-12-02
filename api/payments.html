@@ -1,29 +1,20 @@
 const crypto = require('crypto'); module.exports = async (req, res) => { // 1.
-Allow browser to talk to this function (CORS fix just in case)
-res.setHeader('Access-Control-Allow-Credentials', true);
-res.setHeader('Access-Control-Allow-Origin', '*');
-res.setHeader('Access-Control-Allow-Methods',
-'GET,OPTIONS,PATCH,DELETE,POST,PUT'); res.setHeader(
-'Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept,
-Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-); // Handle simple check (OPTIONS request) if (req.method === 'OPTIONS') {
-res.status(200).end(); return; } // Only allow POST if (req.method !== 'POST') {
-return res.status(405).json({ error: 'Method not allowed' }); } try { const {
-amount, name, email } = req.body; const projectid =
-process.env.PAYSERA_PROJECT_ID; const sign_password =
-process.env.PAYSERA_PASSWORD; if (!projectid || !sign_password) {
-console.error('Missing Environment Variables'); return res.status(500).json({
-error: 'Server misconfigured' }); } const amountInCents =
-Math.round(parseFloat(amount) * 100); const orderid = 'BC-' + Date.now(); //
-MAKE SURE THESE MATCH YOUR REAL SITE const domain =
-'https://www.bitcryptics.online'; const params = { projectid: projectid,
-orderid: orderid, accepturl: `${domain}/success.html`, cancelurl:
-`${domain}/payments.html`, version: '1.6', test: '0', p_firstname: name,
-p_email: email, amount: amountInCents, currency: 'EUR', country: 'AL', payment:
-'' }; const queryString = new URLSearchParams(params).toString(); const data =
+Check method if (req.method !== 'POST') { return res.status(405).send({ error:
+'Method not allowed' }); } try { // 2. Get Data const { amount, name, email } =
+req.body; const projectid = process.env.PAYSERA_PROJECT_ID; const sign_password
+= process.env.PAYSERA_PASSWORD; // 3. Validation if (!projectid ||
+!sign_password) { console.error('Missing Environment Variables'); return
+res.status(500).json({ error: 'Server Config Error' }); } // 4. Prepare Logic
+const amountInCents = Math.round(parseFloat(amount) * 100); const orderid =
+'BC-' + Date.now(); const domain = 'https://www.bitcryptics.online'; const
+params = { projectid: projectid, orderid: orderid, accepturl:
+`${domain}/success.html`, cancelurl: `${domain}/payments.html`, version: '1.6',
+test: '0', p_firstname: name, p_email: email, amount: amountInCents, currency:
+'EUR', country: 'AL', payment: '' }; // 5. Sign const queryString = new
+URLSearchParams(params).toString(); const data =
 Buffer.from(queryString).toString('base64'); const sign =
-crypto.createHash('md5').update(data + sign_password).digest('hex'); const
-redirectUrl = `https://www.paysera.com/pay/?data=${data}&sign=${sign}`; return
-res.status(200).json({ url: redirectUrl }); } catch (error) {
-console.error(error); return res.status(500).json({ error: 'Internal Server
-Error' }); } };
+crypto.createHash('md5').update(data + sign_password).digest('hex'); // 6.
+Respond const redirectUrl =
+`https://www.paysera.com/pay/?data=${data}&sign=${sign}`; res.status(200).json({
+url: redirectUrl }); } catch (error) { console.error(error);
+res.status(500).json({ error: 'Internal Server Error' }); } };
